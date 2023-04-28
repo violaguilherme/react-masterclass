@@ -1,48 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { 
-  House, 
-  Hash, 
-  Bell, 
-  Envelope, 
-  BookmarkSimple, 
-  FileText, 
-  User, 
-  DotsThreeCircle, 
-  Sparkle, 
-} from "phosphor-react"
+import React from "react"
+import ReactDOM from "react-dom/client"
 
-import './global.css'
-import twitterLogo from "./assets/twitter-logo.svg"
+import "./global.css"
+import { Tweet } from "./components/Tweet"
+import { Sidebar } from "./components/Sidebar"
+import { TimelineHeader } from "./components/Timeline-header"
+import { Separator } from "./components/Separator"
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const tweets = [
+    "My first tweet",
+    "Learning React",
+    "lorem lorem lorem"
+]
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <div className="layout">
-        <aside className="sidebar">
-            <img className="logo" src={twitterLogo} alt="Logo" />
-
-            <nav className="main-navigation">
-              <a href="" className="active"> <House weight="fill" /> Home</a>
-              <a href=""> <Hash /> Explore</a>
-              <a href=""> <Bell /> Notifications</a>
-              <a href=""> <Envelope /> Messages</a>
-              <a href=""> <BookmarkSimple /> Bookmarks</a>
-              <a href=""> <FileText /> Lists</a>
-              <a href=""> <User /> Profile</a>
-              <a href=""> <DotsThreeCircle /> More</a>
-            </nav>
-
-            <button className="new-tweet" type="button">
-              Tweet
-            </button>
-        </aside>
+        <Sidebar />
 
         <div className="content">
           <main className="timeline">
-            <div className="timeline-header">
-              Home
-              <Sparkle />
-            </div>
+
+            <TimelineHeader title="Home" />
 
             <form className="new-tweet-form">
               <label htmlFor="tweet">
@@ -52,8 +31,17 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
               <button type="submit">Tweet</button>
             </form>
+            
+            < Separator />
 
-            <div className="separator" />
+            {tweets.map(tweet => {
+                return (
+                    <Tweet 
+                        key={tweet} 
+                        content={tweet} 
+                    />
+                ) 
+            })}
           </main>
         </div>
     </div>
