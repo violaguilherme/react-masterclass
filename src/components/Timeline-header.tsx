@@ -1,6 +1,6 @@
-import "./Timeline-header.css"
-
 import { Sparkle } from "phosphor-react";
+
+import "./Timeline-header.css"
 
 interface IHeaderProps {
     title: string
