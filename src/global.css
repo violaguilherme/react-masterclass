@@ -26,17 +26,3 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-.layout {
-    margin: 0 auto;
-    max-width: 1000px;
-
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    margin-bottom: 1rem;
-}
-
-.content {
-    border-left: solid 1px #2F2F2F;
-    border-right: solid 1px #2F2F2F;
-}

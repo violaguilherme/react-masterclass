@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom"
 
+import "./Default.css"
 import { Sidebar } from "../components/Sidebar";
 
 export function Default() {
