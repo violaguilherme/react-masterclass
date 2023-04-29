@@ -53,6 +53,26 @@
     transition: 0.3s;    
 }
 
+.answer-tweet-form button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+}
+
 .answer-tweet-form button:hover {
     filter: brightness(0.8);
+}
+
+@media (max-width: 780px) {
+    .answer-tweet-form label textarea {
+        font-size: 1.1rem;
+    }
+
+    .answer-tweet-form button span {
+        display: none;
+    }
+
+    .answer-tweet-form button svg {
+        display: block;
+    }
 }
