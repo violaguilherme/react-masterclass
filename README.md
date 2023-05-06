@@ -7,5 +7,5 @@
 - React
 - Typescrypt
 - Figma
-- HTML
 - CSS
+- Vite
