@@ -5,7 +5,7 @@
 ## 🖥️ Technologies
 
 - React
-- Typescrypt
+- TypeScript
 - Figma
 - CSS
 - Vite
